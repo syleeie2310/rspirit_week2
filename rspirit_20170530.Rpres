@@ -88,15 +88,15 @@ Show Time (Python)
 age = 20
 name = 'Swaroop'
 
-print '{0} was {1} years old when he wrote this book'.format(name, age)
-print 'Why is {0} playing with that python?'.format(name)
+print ('{0} was {1} years old when he wrote this book').format(name, age)
+print ('Why is {0} playing with that python?').format(name)
 ```
 
 ```{python}
 for i in range(1, 5):
-    print i
+    print (i)
 else:
-    print 'The for loop is over'
+    print ('The for loop is over')
 ```
 
 
@@ -493,12 +493,12 @@ print ('Perimeter is', 2 * (length + breadth))
 
 ```
 number = 23
-guess = int(put('Enter an integer : '))
+guess = int(input('Enter an integer : '))
 
 if guess == number:
     # New block starts here
     print ('Congratulations, you guessed it.')
-    print '(but you do not win any prizes!)'
+    print ('but you do not win any prizes!')
     # New block ends here
 elif guess < number:
     # Another block
@@ -513,7 +513,7 @@ print ('Done')
 # after the if statement is executed.
 ```
 
-- python if.py
+- python if_example.py
 
 
 1) 기초문법 학습 (6)
@@ -545,7 +545,7 @@ else:
 print ('Done')
 ```
 
-- python while.py
+- python while_example.py
 
 
 
@@ -857,20 +857,17 @@ print ("Swaroop's address is", ab['Swaroop'])
 # Deleting a key-value pair
 del ab['Spammer']
 
-print ('\nThere are {} contacts in the address-book\n').format(len(ab))
+print ('\nThere are {} contacts in the address-book\n'.format(len(ab)))
 
 for name, address in ab.items():
-    print ('Contact {} at {}').format(name, address)
+    print ('Contact {} at {}'.format(name, address))
 
 # Adding a key-value pair
 ab['Guido'] = 'guido@python.org'
 
 if 'Guido' in ab:
     print ("\nGuido's address is", ab['Guido'])
-    
 ```
-
-
 
 
 1) 기초문법 학습 (19)
@@ -889,11 +886,17 @@ bri = set(['brazil', 'russia', 'india'])
 'usa' in bri
 
 bric = bri.copy()
+
 bric.add('china')
 bric.issuperset(bri)
 
+print(bri)
+print(bric)
+
 bri.remove('russia')
-bri & bric # OR bri.intersection(bric)
+
+print(bri & bric)
+print(bri.intersection(bric))
 ```
 
 
